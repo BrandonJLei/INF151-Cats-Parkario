@@ -30,6 +30,11 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+	public bool baseCharacter = true;
+	public bool squareCharacter = false;
+	public bool triangleCharacter = false;
+	public bool circleCharacter = false;
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -144,4 +149,21 @@ public class CharacterController2D : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	public void Upgrade()
+    {
+		Debug.Log("Upgrade!");
+		if (squareCharacter == false)
+		{
+			squareCharacter = true;
+		}
+		else if(triangleCharacter == false)
+        {
+			triangleCharacter = true;
+        }
+		else if (circleCharacter == false)
+        {
+			circleCharacter = true;
+        }
+    }
 }
