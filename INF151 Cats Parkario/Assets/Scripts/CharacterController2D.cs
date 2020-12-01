@@ -34,6 +34,7 @@ public class CharacterController2D : MonoBehaviour
 	public bool squareCharacter = false;
 	public bool triangleCharacter = false;
 	public bool circleCharacter = false;
+	public Animator animator;
 
 	private void Awake()
 	{
@@ -63,6 +64,7 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
+		animator.SetBool("IsJumping", !m_Grounded);
 	}
 
 
