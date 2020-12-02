@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!58 &51734841 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4936752183691377244, guid: bbd930d6938185c4e82b92e828248172,
+    type: 3}
+  m_PrefabInstance: {fileID: 891452363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &51734842 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4936752183691377235, guid: bbd930d6938185c4e82b92e828248172,
+    type: 3}
+  m_PrefabInstance: {fileID: 891452363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228119880
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,8 +298,63 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: squareSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 35b8a0b97dbe54ae79b2d3138f7deca7,
+        type: 3}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: squareCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: StickColliderTop
+      value: 
+      objectReference: {fileID: 51734842}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: StickColliderBot
+      value: 
+      objectReference: {fileID: 51734841}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: triangleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 674facc4b0138483797b52b518ba5b23,
+        type: 3}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: circleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79f02bd09eb9e48dea83230134a0fccf,
+        type: 3}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: triangleCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+        type: 3}
+      propertyPath: circleCharacter
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbd930d6938185c4e82b92e828248172, type: 3}
+--- !u!114 &891452364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4936752183691377247, guid: bbd930d6938185c4e82b92e828248172,
+    type: 3}
+  m_PrefabInstance: {fileID: 891452363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b66937df8bf01419f4d843949d7a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1058477246
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d938ff99245b17b498495661d94d2532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 891452364}
 --- !u!1001 &2662234360864222715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410,17 +477,17 @@ PrefabInstance:
     - target: {fileID: 2662234361271547760, guid: b2a24917b71e7394fb0b9f0fb2414d63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.29
+      value: -3.72
       objectReference: {fileID: 0}
     - target: {fileID: 2662234361271547760, guid: b2a24917b71e7394fb0b9f0fb2414d63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.41687056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2662234361271547760, guid: b2a24917b71e7394fb0b9f0fb2414d63,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -72.83301
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2662234361271547760, guid: b2a24917b71e7394fb0b9f0fb2414d63,
         type: 3}
