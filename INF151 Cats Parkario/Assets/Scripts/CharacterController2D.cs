@@ -11,6 +11,13 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
+	[SerializeField] private Collider2D StickColliderTop;
+	[SerializeField] private Collider2D StickColliderBot;
+
+
+	[SerializeField] private Sprite squareSprite;
+	[SerializeField] private Sprite triangleSprite;
+	[SerializeField] private Sprite circleSprite;
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -31,9 +38,11 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_wasCrouching = false;
 
 	public bool baseCharacter = true;
-	public bool squareCharacter = false;
-	public bool triangleCharacter = false;
 	public bool circleCharacter = false;
+	public bool triangleCharacter = false;
+	public bool squareCharacter = false;
+	
+	
 	public Animator animator;
 
 	private void Awake()
@@ -65,6 +74,8 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		animator.SetBool("IsJumping", !m_Grounded);
+
+
 	}
 
 
@@ -168,4 +179,62 @@ public class CharacterController2D : MonoBehaviour
 			circleCharacter = true;
         }
     }
+
+	public void ChangeToStick()
+    {
+		StickColliderTop.enabled = true;
+		StickColliderBot.enabled = true;
+		animator.enabled = true;
+		if (gameObject.GetComponent<PolygonCollider2D>() != null)
+		{
+			Destroy(GetComponent<PolygonCollider2D>());
+		}
+	}
+
+	public void ChangeToCircle()
+	{
+		if (circleCharacter)
+		{
+			animator.enabled = false;
+			GetComponent<SpriteRenderer>().sprite = circleSprite;
+			StickColliderTop.enabled = false;
+			StickColliderBot.enabled = false;
+			if (gameObject.GetComponent<PolygonCollider2D>() != null)
+			{
+				Destroy(GetComponent<PolygonCollider2D>());
+			}
+			gameObject.AddComponent<PolygonCollider2D>();
+		}
+	}
+	public void ChangeToTriangle()
+	{
+		if (triangleCharacter)
+		{
+			animator.enabled = false;
+			GetComponent<SpriteRenderer>().sprite = triangleSprite;
+			StickColliderTop.enabled = false;
+			StickColliderBot.enabled = false;
+			if (gameObject.GetComponent<PolygonCollider2D>() != null)
+            {
+				Destroy(GetComponent<PolygonCollider2D>());
+			}
+			gameObject.AddComponent<PolygonCollider2D>();
+		}
+	}
+	public void ChangeToSquare()
+	{
+		if (squareCharacter)
+		{
+			animator.enabled = false;
+			GetComponent<SpriteRenderer>().sprite = squareSprite;
+			StickColliderTop.enabled = false;
+			StickColliderBot.enabled = false;
+			if (gameObject.GetComponent<PolygonCollider2D>() != null)
+			{
+				Destroy(GetComponent<PolygonCollider2D>());
+			}
+			gameObject.AddComponent<PolygonCollider2D>();
+		}
+	}
+
 }
