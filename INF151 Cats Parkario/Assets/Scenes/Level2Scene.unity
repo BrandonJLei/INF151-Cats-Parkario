@@ -2498,6 +2498,18 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
+<<<<<<< HEAD
+=======
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -8, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2514,8 +2526,13 @@ Tilemap:
   - first: {x: -100, y: -12, z: 0}
     second:
       serializedVersion: 2
+<<<<<<< HEAD
       m_TileIndex: 5
       m_TileSpriteIndex: 5
+=======
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2879,6 +2896,7 @@ Tilemap:
     m_Data: {fileID: 7192437163543651281, guid: 9f15bdcc21b1047639a3c6436d484553,
       type: 3}
   m_TileMatrixArray:
+<<<<<<< HEAD
 <<<<<<< HEAD
   - m_RefCount: 253
 =======
@@ -6064,6 +6082,9 @@ Tilemap:
 =======
   - m_RefCount: 257
 >>>>>>> parent of fde8f17... Update Level2Scene.unity
+=======
+  - m_RefCount: 257
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
     m_Data:
       e00: 1
       e01: 0
@@ -6083,6 +6104,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   - m_RefCount: 253
 =======
@@ -6091,10 +6113,14 @@ Tilemap:
 =======
   - m_RefCount: 257
 >>>>>>> parent of fde8f17... Update Level2Scene.unity
+=======
+  - m_RefCount: 257
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
   m_Origin: {x: -57, y: -6, z: 0}
@@ -6103,6 +6129,10 @@ Tilemap:
   m_Origin: {x: -101, y: -54, z: 0}
   m_Size: {x: 133, y: 67, z: 1}
 >>>>>>> Stashed changes
+=======
+  m_Origin: {x: -57, y: -6, z: 0}
+  m_Size: {x: 81, y: 10, z: 1}
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
 =======
   m_Origin: {x: -57, y: -6, z: 0}
   m_Size: {x: 81, y: 10, z: 1}
