@@ -2499,6 +2499,8 @@ Tilemap:
       m_TileIndex: 5
       m_TileSpriteIndex: 5
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -2519,6 +2521,24 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
+<<<<<<< HEAD
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
+=======
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -8, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+<<<<<<< HEAD
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+=======
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2896,6 +2916,7 @@ Tilemap:
     m_Data: {fileID: 7192437163543651281, guid: 9f15bdcc21b1047639a3c6436d484553,
       type: 3}
   m_TileMatrixArray:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   - m_RefCount: 253
@@ -6085,6 +6106,9 @@ Tilemap:
 =======
   - m_RefCount: 257
 >>>>>>> parent of fde8f17... Update Level2Scene.unity
+=======
+  - m_RefCount: 257
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
     m_Data:
       e00: 1
       e01: 0
@@ -6105,11 +6129,15 @@ Tilemap:
   m_TileColorArray:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   - m_RefCount: 253
 =======
   - m_RefCount: 576
 >>>>>>> Stashed changes
+=======
+  - m_RefCount: 257
+>>>>>>> parent of fde8f17... Update Level2Scene.unity
 =======
   - m_RefCount: 257
 >>>>>>> parent of fde8f17... Update Level2Scene.unity
