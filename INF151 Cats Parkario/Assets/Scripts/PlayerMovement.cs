@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             controller.ChangeToStick();
             changeStick = false;
         }
-        if (changeCircle && controller.circleCharacter)
+        if (changeCircle)
         {
             controller.ChangeToCircle();
             actualSpeed = runSpeed + 20;

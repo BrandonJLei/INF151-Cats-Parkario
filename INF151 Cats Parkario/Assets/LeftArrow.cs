@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class LeftArrow : MonoBehaviour
 {
-    private Vector3 startPosition;
-    public float distance = 10f;
+    public Vector3 startPosition;
 
-    void Start()
-    {
-        startPosition = transform.position;
-    }
 
     void Update()
     {
-        if (transform.position.x >= (distance*-1))
+        if (transform.position.x >= -10)
         {
-            transform.Translate(-0.1f, 0f, 0f);
+            transform.Translate(-0.01f, 0f, 0f);
         }
         else 
         {
@@ -24,5 +19,4 @@ public class LeftArrow : MonoBehaviour
         } 
         
     }
-
 }
