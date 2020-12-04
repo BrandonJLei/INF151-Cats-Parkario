@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RightArrow : MonoBehaviour
 {
+    public Vector3 startPosition;
+
     void Update()
     {
         if (transform.position.x <= 10)
@@ -12,7 +14,7 @@ public class RightArrow : MonoBehaviour
         }
         else
         {
-            transform.Translate(0f, 0f, 0f);
+            transform.position = startPosition;
         }
 
     }

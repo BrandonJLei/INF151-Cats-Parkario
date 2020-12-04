@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LeftArrow : MonoBehaviour
 {
+    public Vector3 startPosition;
+
 
     void Update()
     {
@@ -13,7 +15,7 @@ public class LeftArrow : MonoBehaviour
         }
         else 
         {
-            transform.Translate(0f, 0f, 0f);
+            transform.position = startPosition;
         } 
         
     }
