@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/TobyScene.unity
     guid: 2ec0d279f1d4e1e47a36bea41b8306a7
   - enabled: 1
+    path: Assets/Scenes/BrandonScene.unity
+    guid: 6b22d29a6efd5b349b9a469400be2784
+  - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 019d9b1ec94e1c84f815e8f854516df7
   - enabled: 1
-    path: Assets/Scenes/BrandonScene.unity
-    guid: 6b22d29a6efd5b349b9a469400be2784
+    path: Assets/Scenes/Level1Scene.unity
+    guid: 88e23be4fcaa78d43929cb7d713ea48a
+  - enabled: 1
+    path: Assets/Scenes/Level2Scene.unity
+    guid: 7a7ed98de749fe642a757c188d181f9a
   m_configObjects: {}
