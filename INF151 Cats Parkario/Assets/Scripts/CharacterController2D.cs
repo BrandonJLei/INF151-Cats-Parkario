@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -41,14 +42,17 @@ public class CharacterController2D : MonoBehaviour
 	public bool circleCharacter = false;
 	public bool triangleCharacter = false;
 	public bool squareCharacter = false;
+
+	private string currentShape = "Stick";
 	
 	
 	public Animator animator;
+	public CameraController cameraCont;
 
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
+		//m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezeRotationZ;
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 
@@ -166,25 +170,30 @@ public class CharacterController2D : MonoBehaviour
 	public void Upgrade()
     {
 		Debug.Log("Upgrade!");
-		if (squareCharacter == false)
+		if (circleCharacter == false)
 		{
-			squareCharacter = true;
+			 circleCharacter = true;
 		}
 		else if(triangleCharacter == false)
         {
 			triangleCharacter = true;
         }
-		else if (circleCharacter == false)
+		else if (squareCharacter == false)
         {
-			circleCharacter = true;
-        }
+			squareCharacter = true;
+		}
     }
 
 	public void ChangeToStick()
     {
+		currentShape = "Stick";
+		gameObject.layer = 8;
+		cameraCont.offset = new Vector3(0, 0, -13);
+		transform.rotation = Quaternion.identity;
 		StickColliderTop.enabled = true;
 		StickColliderBot.enabled = true;
 		animator.enabled = true;
+		m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
 		if (gameObject.GetComponent<PolygonCollider2D>() != null)
 		{
 			Destroy(GetComponent<PolygonCollider2D>());
@@ -195,21 +204,31 @@ public class CharacterController2D : MonoBehaviour
 	{
 		if (circleCharacter)
 		{
+			currentShape = "Circle";
+			gameObject.layer = 8;
+			cameraCont.offset = new Vector3(0, 0, -10);
 			animator.enabled = false;
 			GetComponent<SpriteRenderer>().sprite = circleSprite;
 			StickColliderTop.enabled = false;
-			StickColliderBot.enabled = false;
+			StickColliderBot.enabled = false;	
 			if (gameObject.GetComponent<PolygonCollider2D>() != null)
 			{
 				Destroy(GetComponent<PolygonCollider2D>());
 			}
 			gameObject.AddComponent<PolygonCollider2D>();
+			//m_Rigidbody2D.constraints = RigidbodyConstraints2D.None;
+
+
 		}
 	}
 	public void ChangeToTriangle()
 	{
 		if (triangleCharacter)
 		{
+			currentShape = "Triangle";
+			gameObject.layer = 8;
+			cameraCont.offset = new Vector3(0, 0, -10);
+			transform.rotation = Quaternion.identity;
 			animator.enabled = false;
 			GetComponent<SpriteRenderer>().sprite = triangleSprite;
 			StickColliderTop.enabled = false;
@@ -225,6 +244,10 @@ public class CharacterController2D : MonoBehaviour
 	{
 		if (squareCharacter)
 		{
+			currentShape = "Square";
+			gameObject.layer = 10;
+			cameraCont.offset = new Vector3(0, 0, -10);
+			transform.rotation = Quaternion.identity;
 			animator.enabled = false;
 			GetComponent<SpriteRenderer>().sprite = squareSprite;
 			StickColliderTop.enabled = false;
@@ -236,5 +259,24 @@ public class CharacterController2D : MonoBehaviour
 			gameObject.AddComponent<PolygonCollider2D>();
 		}
 	}
+	public void death()
+    {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
+	void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "LeftArrow" && !(currentShape == "Triangle"))
+        {
+			m_Rigidbody2D.AddForce(new Vector3(-1000.0f, 0.0f, 0.0f));
+        }
+		if (col.gameObject.tag == "RightArrow" && !(currentShape == "Triangle"))
+		{
+			m_Rigidbody2D.AddForce(new Vector3(1000.0f, 0.0f, 0.0f));
+		}
+		if (col.gameObject.tag == "Oomba")
+		{
+			death();
+		}
+	}
 }

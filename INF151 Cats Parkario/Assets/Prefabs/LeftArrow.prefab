@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1997411140900032640}
   - component: {fileID: 1997411140900032647}
   - component: {fileID: 1997411140900032646}
+  - component: {fileID: 7772786637428012207}
   m_Layer: 0
   m_Name: LeftArrow
-  m_TagString: Untagged
+  m_TagString: LeftArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,3 +96,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650b15fc458e6aa49a58b463550609bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: 0, y: 0, z: 0}
+--- !u!61 &7772786637428012207
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997411140900032645}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6528808, y: -0.14890274}
+  m_SpriteTilingProperty:
+    border: {x: 0.1875, y: 0.125, z: 0.5625, w: 0.4375}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1}
+    newSize: {x: 2, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19942331, y: 0.32650155}
+  m_EdgeRadius: 0

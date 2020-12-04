@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public float runSpeed = 40f;
+    private float actualSpeed = 40f;
 
     bool jump = false;
     bool changeStick = false;
@@ -15,11 +16,14 @@ public class PlayerMovement : MonoBehaviour
     bool changeSquare = false;
     float horizontalMove = 0f;
     
-
+    void Start()
+    {
+        actualSpeed = runSpeed;
+    }
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("Horizontal") * actualSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         if (Input.GetButtonDown("Jump"))
         {
@@ -43,9 +47,12 @@ public class PlayerMovement : MonoBehaviour
             changeSquare = true;
         }
 
+        if (transform.position.y < -30f)
+        {
+            controller.death();
+        }
 
     }
-
 
     void FixedUpdate()
     {
@@ -54,21 +61,25 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
         if(changeStick)
         {
+            actualSpeed = runSpeed;
             controller.ChangeToStick();
             changeStick = false;
         }
         if (changeCircle)
         {
             controller.ChangeToCircle();
+            actualSpeed = runSpeed + 20;
             changeCircle = false;
         }
         if (changeTriangle)
         {
+            actualSpeed = runSpeed;
             controller.ChangeToTriangle();
             changeTriangle = false;
         }
         if (changeSquare)
         {
+            actualSpeed = runSpeed;
             controller.ChangeToSquare();
             changeSquare = false;
         }
