@@ -15,7 +15,7 @@ public class FallingPlatform : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D col)
     {
-        if (col.gameObject.name.Equals("StickFigurePlayer"))
+        if (col.gameObject.name.Equals("FullPlayer"))
         {
             Invoke("DropPlatform", 0.5f);
             Destroy(gameObject, 2f);
