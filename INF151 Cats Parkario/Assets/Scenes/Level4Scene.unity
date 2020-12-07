@@ -1396,15 +1396,6 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: -5, y: -8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: -3, y: -8, z: 0}
     second:
       serializedVersion: 2
@@ -1442,15 +1433,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 1, y: -8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: 3, y: -8, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 3
@@ -3258,7 +3240,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 702262fd660504deaa62c64ee8b08470, type: 2}
   - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 302afdcb94122490fac1dfae5fa8d226, type: 2}
-  - m_RefCount: 44
+  - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: 231a02f514dad4936b91d652e56981e5, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: ebdacb6715c1c4c3386e48744e5c5ee4, type: 2}
@@ -3290,7 +3272,7 @@ Tilemap:
   - m_RefCount: 10
     m_Data: {fileID: 6686727802346683180, guid: fe17fff874c464189b06343c1768b14e,
       type: 3}
-  - m_RefCount: 44
+  - m_RefCount: 42
     m_Data: {fileID: -1908804314721512886, guid: b73254dc16c834069844cf1d08125515,
       type: 3}
   - m_RefCount: 15
@@ -3323,7 +3305,7 @@ Tilemap:
     m_Data: {fileID: -1741491490060002427, guid: 9f15bdcc21b1047639a3c6436d484553,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 262
+  - m_RefCount: 260
     m_Data:
       e00: 1
       e01: 0
@@ -3342,7 +3324,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 262
+  - m_RefCount: 260
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4042,7 +4024,7 @@ Transform:
   m_Children:
   - {fileID: 663552269}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1372951696
 PrefabInstance:
