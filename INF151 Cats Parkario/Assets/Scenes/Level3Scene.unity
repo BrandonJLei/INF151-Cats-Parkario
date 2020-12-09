@@ -677,7 +677,7 @@ PrefabInstance:
     - target: {fileID: 3907167598350945537, guid: 14a34479d239a33408ec876b0ce51305,
         type: 3}
       propertyPath: m_Name
-      value: GameMaster
+      value: GameMaster3
       objectReference: {fileID: 0}
     - target: {fileID: 3907167598350945542, guid: 14a34479d239a33408ec876b0ce51305,
         type: 3}
@@ -746,6 +746,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a34479d239a33408ec876b0ce51305, type: 3}
+--- !u!114 &192668033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3907167598350945542, guid: 14a34479d239a33408ec876b0ce51305,
+    type: 3}
+  m_PrefabInstance: {fileID: 192668032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025ee59000496964289e7f472846f7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &394577274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,6 +1106,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8073232451891848886, guid: a19bb23966effde4a8c0b245b8f12dbb,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 192668033}
+    - target: {fileID: 8073232451891848886, guid: a19bb23966effde4a8c0b245b8f12dbb,
+        type: 3}
+      propertyPath: newLevel
+      value: Level4Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 8073232451891848887, guid: a19bb23966effde4a8c0b245b8f12dbb,
         type: 3}
       propertyPath: m_Name

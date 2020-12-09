@@ -6,15 +6,35 @@ public class GameMaster : MonoBehaviour
 {
     private static GameMaster instance;
     public Vector2 lastCheckPointPos;
+    public bool isLevelComplete;
     
+    void Start()
+    {
+        isLevelComplete = false;
+    }
     void Awake()
     {
-        if(instance == null)
+        if(isLevelComplete == false)
         {
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
                 DontDestroyOnLoad(instance);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
         else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    void Update()
+    {
+        if(isLevelComplete == true)
         {
             Destroy(gameObject);
         }
