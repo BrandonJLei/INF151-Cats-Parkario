@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class LeftArrow : MonoBehaviour
 {
-    private Vector3 startPosition;
-    public int distance;
+    Vector3 startPosition;
+    public float distance;
 
-    void start()
+    void Start()
     {
         startPosition = transform.position;
     }
     void Update()
     {
-        if (transform.position.x >= (distance * -1))
+        if (transform.position.x >= startPosition.x + (distance * -1))
         {
             transform.Translate(-0.05f, 0f, 0f);
         }
