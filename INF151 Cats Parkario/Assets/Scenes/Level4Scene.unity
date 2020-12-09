@@ -9123,6 +9123,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8073232451891848886, guid: a19bb23966effde4a8c0b245b8f12dbb,
+        type: 3}
+      propertyPath: newLevel
+      value: VictoryScene
+      objectReference: {fileID: 0}
     - target: {fileID: 8073232451891848887, guid: a19bb23966effde4a8c0b245b8f12dbb,
         type: 3}
       propertyPath: m_Name
